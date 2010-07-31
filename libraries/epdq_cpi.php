@@ -3,7 +3,7 @@
 /**
  * ePDQ CPI class
  *
- * This CodeIgniter library provides a neat and simple method to interface with
+ * This CodeIgniter library provides a neat and simple method to forward to the
  * Barclays ePDQ CPI service http://www.barclaycardbusiness.co.uk/epdq_cpi/
  * 
  * @package   epdq_cpi
