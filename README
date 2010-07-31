@@ -1,0 +1,11 @@
+Barlcays ePDQ CPI library
+==================================
+
+This CodeIgntier library provides a neat and simple method to interface for
+Barclays ePDQ CPI service http://www.barclaycardbusiness.co.uk/epdq_cpi/
+
+Extra
+-----
+
+If you'd like to request changes, report bug fixes, or contact
+the developer of this library, email <orattue@toomanytabs.com>
