@@ -1,8 +1,21 @@
-Barlcays ePDQ CPI library
-==================================
+Barlcays ePDQ CPI library - Alpha - Work in progress
+=============================================
 
 This CodeIgniter library provides a neat and simple method to forward to the
 Barclays ePDQ CPI service http://www.barclaycardbusiness.co.uk/epdq_cpi/
+
+TODO
+-----
+
+- Make functional library
+- Add readme notes about setting up CI config file for url parameters
+- Add usage notes
+- Add order id
+- Add additional field support
+- Handling Transaction Response Messages including db schema
+- Include example application
+- Add readme notes about CPI setup and common errors e.g Not a Valid Allowed URL
+and Passphrase Mismatch 
 
 Extra
 -----

@@ -7,8 +7,8 @@
 */
 
 // Client specific details
-define('EPDQ_CLIENTID', '');
-define('EPDQ_PASSPHRASE', '');
+$config['epdq_clientid'] = '';
+$config['epdq_passphrase'] = '';
 
 /* End of file epdq_cpi_config.php */
 /* Location: ./application/config/epdq_cpi_config.php */
