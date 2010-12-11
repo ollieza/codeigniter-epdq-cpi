@@ -7,15 +7,14 @@ Barclays ePDQ CPI service http://www.barclaycardbusiness.co.uk/epdq_cpi/
 TODO
 -----
 
-- Make functional library
 - Add readme notes about setting up CI config file for url parameters
 - Add usage notes
-- Add order id
-- Add additional field support
 - Handling Transaction Response Messages including db schema
 - Include example application
 - Add readme notes about CPI setup and common errors e.g Not a Valid Allowed URL
 and Passphrase Mismatch 
+- Add support for pre-populating user address and delivery address including
+same_deliver_address() function
 
 Extra
 -----
