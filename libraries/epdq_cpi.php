@@ -1,4 +1,4 @@
-<?php if (!defined('<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 /**
  * ePDQ CPI class
@@ -7,7 +7,7 @@
  * Barclays ePDQ CPI service http://www.barclaycardbusiness.co.uk/epdq_cpi/
  * 
  * @package   epdq_cpi
- * @version   0.5
+ * @version   0.9
  * @author    Ollie Rattue, Too many tabs <orattue[at]toomanytabs.com>
  * @copyright Copyright (c) 2010, Ollie Rattue
  * @license   http://www.opensource.org/licenses/mit-license.php
@@ -86,7 +86,7 @@ class epdq_cpi
 		
 		log_message('debug', "ePDQ CPI Class Initialized");
 	}
-		
+	
 	// --------------------------------------------------------------------
 	
 	/*
@@ -108,15 +108,6 @@ class epdq_cpi
 	{
 		$this->email_address = $value;
 	} 
-
-	// --------------------------------------------------------------------
-	
-	// Optional
-	
-	function set_full_name($value = NULL)
-	{
-		$this->full_name = $value;
-	}
 
 	// --------------------------------------------------------------------
 	
@@ -225,11 +216,6 @@ class epdq_cpi
 		{
 			$str .= form_hidden('email', $this->email_address) . "\n";
 		}
-		
-		if ($this->full_name)
-		{
-			$str .= form_hidden('email', $this->full_name) . "\n";
-		}
 	
 		if ($this->shipping_amount)
 		{
@@ -331,54 +317,6 @@ class epdq_cpi
 	// --------------------------------------------------------------------	
 }
 
-// END ePDQ CPI Class
-
-/* End of file epdq_cpi.php */
-/* Location: ./system/libraries/epdq_cpi.php */
-	 * @return string
-	 */	
-	
-	function auto_form($total = NULL, $form_name = NULL, $email_address = NULL, $full_name = NULL)
-	{
-		
-	}
-	
-	// --------------------------------------------------------------------
-	
-	/**
-	 * Receives encrypted transaction data from Barlcays ePDQ
-	 *
-	 * @access public
-	 * @param  string
-	 * @return string
-	 */	
-	
-	function encryption($total = NULL)
-	{
-		$clientid = $this->CI->config->item('epdq_clientid'));
-		$passphrase = $this->CI->config->item('epdq_passphrase'));
-		
-		// This is correct - the password in the post url is the passphrase in CPI config.
-        $params = "clientid=$clientid&password=$passphrase&oid=$orderid&chargetype=Auth&total=$total&currencycode=826"; 
-        $user_agent = $_SERVER['HTTP_USER_AGENT'];
-
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
-        curl_setopt($ch, CURLOPT_URL, $this->epdq_cpi_request_url);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
-        curl_setopt($ch, CURLOPT_USERAGENT, $user_agent);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);  // this line makes it work under https
-
-        $result=curl_exec($ch);
-        curl_close($ch);
-        return $result;
-	}
-	
-	// --------------------------------------------------------------------
-	
-}
 // END ePDQ CPI Class
 
 /* End of file epdq_cpi.php */
