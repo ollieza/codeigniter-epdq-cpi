@@ -15,9 +15,3 @@ TODO
 and Passphrase Mismatch 
 - Add support for pre-populating user address and delivery address including
 same_deliver_address() function
-
-Extra
------
-
-If you'd like to request changes, report bug fixes, or contact
-the developer of this library, email <orattue[at]toomanytabs.com>
