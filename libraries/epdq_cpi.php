@@ -8,10 +8,7 @@
  * 
  * @package   epdq_cpi
  * @version   0.9
- * @author    Ollie Rattue, Too many tabs <orattue[at]toomanytabs.com>
- * @copyright Copyright (c) 2010, Ollie Rattue
  * @license   http://www.opensource.org/licenses/mit-license.php
- * @link      http://github.com/ollierattue/codeigniter-epdq-cpi
  */
 
 class epdq_cpi
